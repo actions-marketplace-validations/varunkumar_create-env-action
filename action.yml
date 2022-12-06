@@ -10,9 +10,9 @@ inputs:
   path:
     description: 'The file root path'
     # by default the directory will be
-    # '/home/runner/work/_actions/varunkumar/create-env-file/v1'
+    # '/home/runner/work/_actions/varunkumar/create-env-file/{ref}/dist'
     # this will allow next actions to access it
-    default: '../../../..'
+    default: '../../../../..'
 outputs:
   parsed:
     description: 'Object version of env file'

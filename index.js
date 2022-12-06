@@ -20,7 +20,7 @@ function sanitize(secrets) {
 function format(secrets) {
   return Object.keys(secrets)
     .map((key) => {
-      return `${key}=${secrets[key]}`;
+      return `${key}="${secrets[key]}"`;
     })
     .join('\n');
 }

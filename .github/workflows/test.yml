@@ -16,6 +16,7 @@ jobs:
           env: |
             FOO=bar
             BAR=baz
+            TEST="#abc" # quotes are mandatory for values with special characters
           path: './'
       # Use the output from the `hello` step
       - name: Get the output path

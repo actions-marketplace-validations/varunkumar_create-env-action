@@ -1,13 +1,30 @@
 name: 'Create .env Action'
 description: 'Creates .env by taking environment keys from GitHub secrets'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  env:
+    description: 'The environment keys'
     required: true
-    default: 'World'
+  file:
+    description: 'The file name'
+    default: '.env'
+  path:
+    description: 'The file root path'
+    # by default the directory will be
+    # '/home/runner/work/_actions/varunkumar/create-env-file/v1'
+    # this will allow next actions to access it
+    default: '../../../..'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  parsed:
+    description: 'Object version of env file'
+  location:
+    description: 'Location of env file'
+  sanitized:
+    description: 'Sanitized version of env file'
+  success:
+    description: 'True or False' # boolean
 runs:
   using: 'node16'
   main: 'dist/index.cjs'
+branding:
+  icon: 'eye-off'
+  color: 'gray-dark'

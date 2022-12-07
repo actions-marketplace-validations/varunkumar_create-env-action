@@ -26,5 +26,5 @@ runs:
   using: 'node16'
   main: 'dist/index.cjs'
 branding:
-  icon: 'eye-off'
+  icon: 'terminal'
   color: 'gray-dark'

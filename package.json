@@ -4,7 +4,9 @@
   "description": "Creates .env by taking environment keys from GitHub secrets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "test": "act push --container-architecture linux/amd64"
   },
   "repository": {
     "type": "git",

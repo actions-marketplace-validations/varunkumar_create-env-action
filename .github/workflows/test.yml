@@ -18,6 +18,5 @@ jobs:
             BAR=baz
             TEST="#abc" # quotes are mandatory for values with special characters
           path: './'
-      # Use the output from the `hello` step
       - name: Get the output path
         run: echo ".env created at ${{ steps.create-env-file.outputs.location }}"
